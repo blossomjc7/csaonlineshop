@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="About Christine A. | Author, Culinary Artist & Bible Teacher"
+  description="Learn about Christine A.'s 30+ years of biblical study, journalism background, culinary training, and ministry vision behind CSA Online Shop."
+>
+  <Header slot="header" />
+
+  <!-- Hero Header -->
+  <section class="bg-[#0A1128] text-white py-20 border-b border-[#D4AF37]/30">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-16 h-16 rounded-full border-2 border-[#D4AF37] bg-[#0A1128] text-[#D4AF37] font-playfair font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-md">
+        CA
+      </div>
+      <span class="text-xs font-montserrat uppercase tracking-widest text-[#D4AF37] font-semibold mb-2 inline-block">
+        Author Profile & Story
+      </span>
+      <h1 class="font-playfair text-4xl sm:text-5xl font-bold mb-4">
+        Meet Christine A.
+      </h1>
+      <p class="text-gray-300 font-montserrat text-sm uppercase tracking-wider font-medium">
+        Author • Culinary Artist • Journalist • Follower of Jesus
+      </p>
+    </div>
+  </section>
+
+  <!-- Narrative Content -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 space-y-16">
+    
+    <!-- Intro Paragraph -->
+    <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed font-inter">
+      <p class="text-xl sm:text-2xl font-playfair text-[#0A1128] italic font-medium leading-relaxed border-l-4 border-[#D4AF37] pl-6 py-1">
+        "I write because words have eternal consequence. In a digital world obsessed with quick monetization and superficial content, my purpose is simple: to anchor hearts in truth, nourish families around wholesome tables, and unveil the living beauty of Jesus Christ."
+      </p>
+    </div>
+
+    <!-- 4 Pillars Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Pillar 1 -->
+      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+        <div class="text-[#D4AF37] font-montserrat uppercase tracking-wider text-xs font-bold mb-2">Pillar 01</div>
+        <h3 class="font-playfair font-bold text-2xl text-[#0A1128] mb-3">30+ Years in the Scriptures</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          My study of the Bible began not as an academic exercise, but as a deep hunger for absolute truth. Decades of researching ancient Hebrew types, Old Testament shadows, and the unbroken prophetic line have confirmed one reality: the Bible is a flawless, living masterpiece that points relentlessly to Jesus Christ.
+        </p>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+        <div class="text-[#D4AF37] font-montserrat uppercase tracking-wider text-xs font-bold mb-2">Pillar 02</div>
+        <h3 class="font-playfair font-bold text-2xl text-[#0A1128] mb-3">The Journalist’s Eye</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          With a background in journalism, I approach writing with rigor, clarity, and respect for the reader's intellect. I do not believe in fluff, emotional manipulation, or empty spiritual buzzwords. My goal is to make profound truths clear, verifiable, and deeply engaging.
+        </p>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+        <div class="text-[#D4AF37] font-montserrat uppercase tracking-wider text-xs font-bold mb-2">Pillar 03</div>
+        <h3 class="font-playfair font-bold text-2xl text-[#0A1128] mb-3">The Culinary Artist</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Good food brings people together like nothing else on earth. As a trained professional culinary artist, I treat cooking as an everyday ministry of hospitality. My culinary works—like <em>20 Under 20</em>—are created for real life: quick, restorative, wholesome, and free from pretense.
+        </p>
+      </div>
+
+      <!-- Pillar 4 -->
+      <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+        <div class="text-[#D4AF37] font-montserrat uppercase tracking-wider text-xs font-bold mb-2">Pillar 04</div>
+        <h3 class="font-playfair font-bold text-2xl text-[#0A1128] mb-3">Scandinavian Inspiration</h3>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Writing from Sweden brings a quiet, contemplative peace to my work. Surrounded by northern waters, silent pine forests, and unhurried skies, each book is forged in quiet prayer and unhurried thought.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- The 3 Ecosystem Sites Box -->
+    <div class="bg-gray-100 rounded-2xl p-8 sm:p-10 border border-gray-300">
+      <h3 class="font-playfair font-bold text-2xl text-[#0A1128] mb-3">Connecting The 3-Site Ecosystem</h3>
+      <p class="text-sm text-gray-600 leading-relaxed mb-6">
+        Whether you are reading devotionals, preparing dinner, or contemplating poetry, your experience is part of one unified vision:
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-montserrat">
+        <div class="bg-white p-4 rounded-lg border border-gray-200">
+          <span class="text-[#D4AF37] font-bold block mb-1">01. Bookstore & Hub</span>
+          <strong class="text-[#0A1128]">csaonlineshop.com</strong>
+          <p class="text-gray-500 mt-1">Central catalog, blog essays & fellowship community</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200">
+          <span class="text-[#D4AF37] font-bold block mb-1">02. 75 Devotionals</span>
+          <strong class="text-[#0A1128]">spiritualbooks.csaonlineshop.com</strong>
+          <p class="text-gray-500 mt-1">Interactive multi-language audio & study reader</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg border border-gray-200">
+          <span class="text-[#D4AF37] font-bold block mb-1">03. Poetry & Musings</span>
+          <strong class="text-[#0A1128]">christinea.csatravellers.com</strong>
+          <p class="text-gray-500 mt-1">Reflections, travel essays & contemplative verse</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center pt-8">
+      <a href="/catalog/" class="inline-block px-8 py-3.5 rounded-lg bg-[#0A1128] text-white hover:bg-[#D4AF37] hover:text-[#0A1128] font-montserrat font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-md">
+        Browse Christine's Published Works
+      </a>
+    </div>
+
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,97 @@
+---
+// Header.astro
+---
+
+<!-- Top Ecosystem Ribbon -->
+<aside class="bg-[#0A1128] border-b border-[#D4AF37]/25 text-xs text-gray-300 py-2 px-4">
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center space-x-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse"></span>
+      <span class="font-montserrat tracking-wider uppercase text-[11px] text-[#D4AF37] font-semibold">The 3-Site Ecosystem</span>
+      <span class="hidden sm:inline text-gray-400">|</span>
+      <span class="hidden sm:inline">Official Bookstore of Christine A.</span>
+    </div>
+    <div class="flex items-center space-x-4 text-[11px] font-montserrat tracking-wide">
+      <a href="https://spiritualbooks.csaonlineshop.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#D4AF37] transition flex items-center gap-1">
+        <span>75 Devotionals & Audio</span>
+        <svg class="w-3 h-3 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+      </a>
+      <span class="text-gray-600">•</span>
+      <a href="https://christinea.csatravellers.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#D4AF37] transition flex items-center gap-1">
+        <span>Poetry & Musings</span>
+        <svg class="w-3 h-3 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+      </a>
+    </div>
+  </div>
+</aside>
+
+<!-- Main Header -->
+<header class="sticky top-0 z-50 bg-[#0A1128]/95 backdrop-blur-md border-b border-[#D4AF37]/20 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Brand Logo -->
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 rounded border-2 border-[#D4AF37] bg-[#0A1128] flex items-center justify-center text-[#D4AF37] font-playfair font-bold text-xl shadow-[0_0_15px_rgba(212,175,55,0.25)] group-hover:scale-105 transition-transform">
+        CA
+      </div>
+      <div class="flex flex-col">
+        <div class="flex items-center">
+          <span class="text-white font-montserrat font-extrabold tracking-wider text-lg sm:text-xl">CSA ONLINESHOP</span>
+          <span class="text-[#D4AF37] text-2xl font-black leading-none ml-0.5">.</span>
+        </div>
+        <span class="text-[#D4AF37]/90 text-[10px] uppercase font-montserrat tracking-widest -mt-1 font-semibold">Author Studio & Sanctuary</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center space-x-7 text-sm font-montserrat font-medium text-gray-200">
+      <a href="/catalog/" class="hover:text-[#D4AF37] transition py-2">Catalog & Shelves</a>
+      <a href="/catalog/#devotionals" class="hover:text-[#D4AF37] transition py-2">Divine Blueprint</a>
+      <a href="/catalog/#culinary" class="hover:text-[#D4AF37] transition py-2">Culinary Arts</a>
+      <a href="/desk/" class="hover:text-[#D4AF37] transition py-2">Author's Desk</a>
+      <a href="/community/" class="hover:text-[#D4AF37] transition py-2">Community Hub</a>
+      <a href="/about/" class="hover:text-[#D4AF37] transition py-2">About Christine</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="hidden sm:flex items-center space-x-4">
+      <a href="/catalog/" class="px-5 py-2.5 rounded border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#0A1128] font-montserrat text-xs uppercase tracking-wider font-semibold transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+        Browse Books
+      </a>
+    </div>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="lg:hidden p-2 text-gray-200 hover:text-[#D4AF37] focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Dropdown -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-[#0A1128] border-b border-[#D4AF37]/30 px-6 py-5 space-y-4 font-montserrat text-sm">
+    <a href="/catalog/" class="block text-gray-200 hover:text-[#D4AF37] py-1">Catalog & Shelves</a>
+    <a href="/catalog/#devotionals" class="block text-gray-200 hover:text-[#D4AF37] py-1">Divine Blueprint (75 Books)</a>
+    <a href="/catalog/#culinary" class="block text-gray-200 hover:text-[#D4AF37] py-1">Culinary Arts & Quick Dinners</a>
+    <a href="/catalog/#poetry" class="block text-gray-200 hover:text-[#D4AF37] py-1">Poetry & Reflections</a>
+    <a href="/catalog/#children" class="block text-gray-200 hover:text-[#D4AF37] py-1">Children & Prophecy Detectives</a>
+    <a href="/catalog/#discernment" class="block text-gray-200 hover:text-[#D4AF37] py-1">Spiritual Discernment & Dreams</a>
+    <a href="/desk/" class="block text-gray-200 hover:text-[#D4AF37] py-1">From the Author's Desk</a>
+    <a href="/community/" class="block text-gray-200 hover:text-[#D4AF37] py-1">Community Hub</a>
+    <a href="/about/" class="block text-gray-200 hover:text-[#D4AF37] py-1">About Christine A.</a>
+    <div class="pt-3 border-t border-gray-800 flex flex-col gap-2">
+      <a href="/catalog/" class="w-full text-center py-2.5 rounded bg-[#D4AF37] text-[#0A1128] font-bold text-xs uppercase tracking-wider">
+        Explore All Shelves
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById('mobileMenuBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+</script>

@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BookCard from '../components/BookCard.astro';
+import { booksData, articlesData } from '../data/books';
+
+const featuredBooks = booksData.slice(0, 6);
+---
+
+<BaseLayout 
+  title="CSA Online Shop | Official Bookstore & Sanctuary for Christine A."
+  description="Step into the official literary home and ministry sanctuary of Christine A. Clean Christian devotionals, gourmet culinary guides, poetry, and children's adventures."
+>
+  <Header slot="header" />
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-[#0A1128] text-white py-20 lg:py-28 overflow-hidden border-b border-[#D4AF37]/30">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#D4AF37]/15 border border-[#D4AF37]/40 text-[#D4AF37] font-montserrat text-xs uppercase tracking-widest font-semibold mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#D4AF37]"></span>
+          Official Author Studio & Ministry Sanctuary
+        </div>
+
+        <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+          Books That Anchor the Soul, Nourish the Mind, and Bring the <span class="text-[#D4AF37] italic font-serif">Word to Life.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-gray-300 leading-relaxed mb-8 font-inter">
+          Step away from rushed algorithms and generic commercial noise. Enter the curated studio of <strong>Christine A.</strong>—author, follower of Jesus, trained culinary artist, and former journalist. Discover sound Christian devotionals, restorative 20-minute recipes, contemplative poetry, and wholesome children’s mysteries written with prayer, excellence, and lived conviction.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="/catalog/" class="px-7 py-3.5 rounded-lg bg-[#D4AF37] text-[#0A1128] font-montserrat font-bold text-xs uppercase tracking-wider hover:bg-white transition-all shadow-lg hover:shadow-[0_0_20px_rgba(212,175,55,0.4)]">
+            Explore All Shelves
+          </a>
+          <a href="/community/" class="px-7 py-3.5 rounded-lg border border-gray-400 text-gray-200 font-montserrat font-semibold text-xs uppercase tracking-wider hover:border-[#D4AF37] hover:text-[#D4AF37] transition">
+            Join The Community
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR ANCHOR BANNER -->
+  <section class="bg-white border-b border-gray-200 py-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="w-12 h-12 rounded-full border-2 border-[#D4AF37] bg-[#0A1128] text-[#D4AF37] font-playfair font-bold text-xl flex items-center justify-center mx-auto mb-4 shadow-sm">
+        CA
+      </div>
+      <blockquote class="font-playfair text-lg sm:text-xl lg:text-2xl text-[#0A1128] italic font-medium max-w-3xl mx-auto leading-relaxed mb-3">
+        "I believe words carry power. Whether unpacking ancient prophecies, crafting a quick weeknight dinner, or writing poetry under Scandinavian skies, everything here is crafted with prayer, excellence, and intellectual honesty."
+      </blockquote>
+      <div class="font-montserrat text-xs uppercase tracking-widest text-gray-500 font-semibold">
+        — Christine A. • Author & Culinary Artist
+      </div>
+    </div>
+  </section>
+
+  <!-- THE 6 GENRE SHELVES PREVIEW -->
+  <section class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <div class="text-[#D4AF37] font-montserrat uppercase tracking-widest text-xs font-bold mb-2">Curated Shelves</div>
+        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0A1128]">Explore Christine's Core Catalog</h2>
+      </div>
+      <a href="/catalog/" class="font-montserrat text-xs uppercase tracking-wider font-bold text-[#0A1128] hover:text-[#D4AF37] flex items-center gap-1 transition">
+        <span>View Full 75+ Book Collection</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </a>
+    </div>
+
+    <!-- Book Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {featuredBooks.map((book) => (
+        <BookCard book={book} />
+      ))}
+    </div>
+
+    <!-- Ecosystem Callout Box -->
+    <div class="mt-16 rounded-2xl bg-gradient-to-br from-[#0A1128] to-[#121e42] text-white p-8 sm:p-12 border border-[#D4AF37]/30 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl">
+      <div class="max-w-2xl">
+        <span class="inline-block px-3 py-1 rounded bg-[#D4AF37]/20 text-[#D4AF37] font-montserrat text-[11px] uppercase tracking-wider font-bold mb-3">
+          Specialized Interactive Library
+        </span>
+        <h3 class="font-playfair text-2xl sm:text-3xl font-bold mb-3">Looking for the 75-Book Divine Blueprint Series?</h3>
+        <p class="text-sm text-gray-300 leading-relaxed">
+          We built a dedicated reader portal featuring the complete 75-book collection with interactive multi-language text-to-speech audio narration across Swedish, Swahili, English, and French.
+        </p>
+      </div>
+      <a 
+        href="https://spiritualbooks.csaonlineshop.com" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="whitespace-nowrap px-6 py-3.5 rounded-lg bg-[#D4AF37] text-[#0A1128] font-montserrat font-bold text-xs uppercase tracking-wider hover:bg-white transition-all shadow-md"
+      >
+        Launch Audio Reader ➔
+      </a>
+    </div>
+  </section>
+
+  <!-- COMMUNITY HUB SPOTLIGHT -->
+  <section class="bg-gray-100 py-16 lg:py-24 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <div class="text-[#D4AF37] font-montserrat uppercase tracking-widest text-xs font-bold mb-2">The CSA Fellowship</div>
+        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0A1128] mb-4">
+          A Sanctuary for Truth-Seekers & Thoughtful Readers
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed font-inter">
+          Move beyond noisy social feeds and argumentative timelines. Connect with fellow readers, study the Scriptures together, exchange wholesome recipes, and share poetry in an uplifting, Christ-centered space.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+          <div class="w-12 h-12 rounded-lg bg-[#0A1128] text-[#D4AF37] flex items-center justify-center font-bold text-xl mb-5">
+            01
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-[#0A1128] mb-2">Christ-Centered & Sound</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Every discussion and study is anchored firmly in the uncompromised Word of God, sound doctrine, and mutual love.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+          <div class="w-12 h-12 rounded-lg bg-[#0A1128] text-[#D4AF37] flex items-center justify-center font-bold text-xl mb-5">
+            02
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-[#0A1128] mb-2">Direct Author Discussions</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Participate in Q&As with Christine A., book study sessions, culinary recipe exchanges, and prayer requests.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
+          <div class="w-12 h-12 rounded-lg bg-[#0A1128] text-[#D4AF37] flex items-center justify-center font-bold text-xl mb-5">
+            03
+          </div>
+          <h3 class="font-playfair font-bold text-xl text-[#0A1128] mb-2">Zero Algorithmic Clutter</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            No ads, no algorithmic tracking, no sponsored distractions—just genuine human fellowship with brothers and sisters.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/community/" class="inline-block px-8 py-3.5 rounded-lg bg-[#0A1128] text-white hover:bg-[#D4AF37] hover:text-[#0A1128] font-montserrat font-bold text-xs uppercase tracking-wider transition-all duration-300 shadow-md">
+          Request Community Invitation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FROM THE AUTHOR'S DESK -->
+  <section class="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div>
+        <div class="text-[#D4AF37] font-montserrat uppercase tracking-widest text-xs font-bold mb-2">From The Author's Desk</div>
+        <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-[#0A1128]">Essays, Musings & Theological Insights</h2>
+      </div>
+      <a href="/desk/" class="font-montserrat text-xs uppercase tracking-wider font-bold text-[#0A1128] hover:text-[#D4AF37] flex items-center gap-1 transition">
+        <span>Read All Articles</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {articlesData.map((art) => (
+        <article class="bg-white rounded-xl border border-gray-200 p-6 flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <div class="flex items-center justify-between text-xs text-gray-500 mb-3 font-montserrat uppercase tracking-wider">
+              <span class="text-[#D4AF37] font-bold">{art.category}</span>
+              <span>{art.readTime}</span>
+            </div>
+            <h3 class="font-playfair font-bold text-xl text-[#0A1128] mb-3 leading-snug">
+              {art.title}
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed mb-4">
+              {art.excerpt}
+            </p>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+            <span>By {art.author}</span>
+            <span class="font-montserrat font-bold text-[#0A1128] hover:text-[#D4AF37]">Read Article ➔</span>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
